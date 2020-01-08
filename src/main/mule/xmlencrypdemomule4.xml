@@ -22,7 +22,7 @@ http://www.mulesoft.org/schema/mule/vm http://www.mulesoft.org/schema/mule/vm/cu
 	<flow name="xmlencrypdemomule4Flow" doc:id="8bf6a653-5012-4fc9-af06-f3ad4b920027" >
 		<http:listener doc:name="Listener" doc:id="0e4b2ff7-379e-45a8-82ff-cfa429b49f13" config-ref="HTTP_Listener_config" path="/posXmlData"/>
 		<crypto:xml-encrypt doc:name="Xml encrypt" doc:id="61e315d0-c92a-4047-979c-9c8a5645b4a4" config-ref="Crypto_Jce" keyId="aseKellton" elementPath="/Country/City"/>
-		<logger level="INFO" doc:name="Logger" doc:id="1e05f8a5-5a05-4a9d-b844-c45669ab2e72" message="==================This is main flow  value ================  #[payload]"/>
+		<logger level="INFO" doc:name="Logger1" doc:id="1e05f8a5-5a05-4a9d-b844-c45669ab2e72" message="==================This is main flow  value ================  #[payload]"/>
 		<vm:publish doc:name="Publish" doc:id="29454982-3080-4aa1-84ee-a6c2e5840469" config-ref="VM_Config" queueName="xmlVM"/>
 	</flow>
 	<flow name="xmlencrypdemomule4Flow1" doc:id="20929f78-cac2-4fc4-ab72-ef62053f65cf" >
